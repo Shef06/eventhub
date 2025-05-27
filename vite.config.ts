@@ -1,13 +1,18 @@
-import { defineConfig } from 'vite'
-import { svelte } from '@sveltejs/vite-plugin-svelte'
+import { defineConfig } from 'vite';
+import { svelte } from '@sveltejs/vite-plugin-svelte';
 
-// https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [svelte({
-    compilerOptions: {
-      compatibility: {
-        componentApi: 4
+  plugins: [svelte()],
+  build: {
+    outDir: 'dist',
+    target: 'esnext'
+  },
+  server: {
+    proxy: {
+      '/api': {
+        target: 'http://localhost:3000',
+        changeOrigin: true
       }
     }
-  })],
-})
+  }
+});
