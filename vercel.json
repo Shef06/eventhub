@@ -4,6 +4,13 @@
     {
       "src": "server/index.js",
       "use": "@vercel/node"
+    },
+    {
+      "src": "package.json",
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "dist"
+      }
     }
   ],
   "routes": [
@@ -12,11 +19,12 @@
       "dest": "server/index.js"
     },
     {
-      "handle": "filesystem"
+      "src": "/(.*\\.[a-z0-9]+$)",
+      "dest": "dist/$1"
     },
     {
       "src": "/(.*)",
-      "dest": "index.html"
+      "dest": "dist/index.html"
     }
   ]
 }
