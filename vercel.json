@@ -4,23 +4,19 @@
     {
       "src": "server/index.js",
       "use": "@vercel/node"
-    },
-    {
-      "src": "package.json",
-      "use": "@sveltejs/adapter-vercel"
     }
   ],
   "routes": [
     {
       "src": "/api/(.*)",
-      "dest": "/server/index.js"
+      "dest": "server/index.js"
     },
     {
       "handle": "filesystem"
     },
     {
       "src": "/(.*)",
-      "dest": "/index.html"
+      "dest": "index.html"
     }
   ]
-} 
+}
