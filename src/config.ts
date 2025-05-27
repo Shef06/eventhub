@@ -1,3 +1,5 @@
-export const API_URL = process.env.VERCEL_URL 
-  ? `https://${process.env.VERCEL_URL}` 
-  : 'http://localhost:3000';
+const isDevelopment = import.meta.env.DEV;
+
+export const API_URL = isDevelopment 
+  ? 'http://localhost:3000'
+  : '';

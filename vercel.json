@@ -12,20 +12,19 @@
   ],
   "routes": [
     {
-      "src": "/api/auth/(.*)",
-      "dest": "server/index.js"
+      "src": "/api/(.*)",
+      "dest": "/server/index.js"
     },
     {
-      "src": "/api/events/(.*)",
-      "dest": "server/index.js"
-    },
-    {
-      "src": "/api/notifications/(.*)",
-      "dest": "server/index.js"
+      "handle": "filesystem"
     },
     {
       "src": "/(.*)",
-      "dest": "/"
+      "dest": "/index.html"
     }
-  ]
+  ],
+  "env": {
+    "MONGO_URI": "@mongo_uri",
+    "JWT_SECRET": "@jwt_secret"
+  }
 } 
