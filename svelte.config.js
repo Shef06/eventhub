@@ -4,10 +4,10 @@ import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
   kit: {
-    adapter: adapter()
+    adapter: adapter({
+      runtime: 'nodejs18.x'
+    })
   },
-  // Consult https://svelte.dev/docs#compile-time-svelte-preprocess
-  // for more information about preprocessors
   preprocess: vitePreprocess()
 };
 
