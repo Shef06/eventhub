@@ -1,0 +1,72 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  @apply bg-base-200 min-h-screen;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  @apply font-semibold text-base-content;
+}
+
+h1 {
+  @apply text-3xl md:text-4xl lg:text-5xl;
+}
+
+h2 {
+  @apply text-2xl md:text-3xl lg:text-4xl;
+}
+
+h3 {
+  @apply text-xl md:text-2xl;
+}
+
+h4 {
+  @apply text-lg md:text-xl;
+}
+
+.page-container {
+  @apply container mx-auto px-4 py-8 max-w-7xl;
+}
+
+.animate-fade-in {
+  opacity: 0;
+  animation: fadeIn 0.5s ease-in forwards;
+}
+
+.animate-slide-up {
+  transform: translateY(20px);
+  opacity: 0;
+  animation: slideUp 0.5s ease-out forwards;
+}
+
+.card-evento {
+  @apply card bg-base-100 shadow-md hover:shadow-lg transition-all duration-300;
+}
+
+.btn-primary-outline {
+  @apply btn btn-outline border-primary text-primary hover:bg-primary hover:text-white;
+}
+
+.form-control-custom {
+  @apply form-control w-full max-w-md mx-auto mb-4;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    @apply text-base-content;
+  }
+}
