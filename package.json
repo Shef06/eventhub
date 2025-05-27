@@ -9,7 +9,8 @@
     "preview": "vite preview",
     "check": "svelte-check --tsconfig ./tsconfig.json && tsc -p tsconfig.node.json",
     "server": "node server/index.js",
-    "dev:server": "nodemon server/index.js"
+    "dev:server": "nodemon server/index.js",
+    "vercel-build": "vite build"
   },
   "devDependencies": {
     "@sveltejs/adapter-auto": "^6.0.1",
