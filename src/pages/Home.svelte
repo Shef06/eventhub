@@ -18,7 +18,7 @@
 <section class="hero min-h-[80vh] bg-gradient-to-br from-primary/90 to-secondary/90 text-primary-content">
   <div class="hero-content text-center">
     <div class="max-w-3xl py-12 md:py-20">
-      <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 animate-slide-up">Scopri Eventi Straordinari</h1>
+      <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 animate-slide-up">Scopri eventi straordinari</h1>
       <p class="text-lg md:text-xl opacity-90 mb-8 max-w-2xl mx-auto animate-slide-up" style="animation-delay: 0.1s;">
         Trova e partecipa ai migliori eventi nella tua città o crea e promuovi i tuoi eventi con EventHub.
       </p>
